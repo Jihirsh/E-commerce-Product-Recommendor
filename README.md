@@ -27,6 +27,27 @@ Prerequisites
 - Python: 3.10 or higher
 - Git: Optional, for cloning the repository
 
+Set up (recommended)
+Open PowerShell in the repository root and run:
+
+```powershell
+# create and activate virtual environment (one-time)
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+# upgrade pip and install dependencies
+pip install --upgrade pip setuptools wheel
+pip install -r .\requirements.txt
+```
+
+Run the CLI (quick validation)
+
+```powershell
+# activate env (if not already)
+.\.venv\Scripts\Activate.ps1
+python .\recommendation_code.py
+```
+
 Setup Instructions
 ------------------
 1. Clone the Repository (if using Git):
@@ -36,7 +57,7 @@ Setup Instructions
 2. Create and Activate a Virtual Environment:
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1  # Windows PowerShell
-   # or source .venv/bin/activate  # Linux/Mac
+   ### or source .venv/bin/activate  ### Linux/Mac
 
 3. Install Dependencies:
    pip install --upgrade pip setuptools wheel
@@ -100,7 +121,7 @@ Troubleshooting
   .\.venv\Scripts\Activate.ps1
   pip install --upgrade pip setuptools wheel
   pip install -U numpy pandas
-  # Or pin versions: pip install 'numpy==1.26.*' 'pandas==2.1.*'
+  ### Or pin versions: pip install 'numpy==1.26.*' 'pandas==2.1.*'
 
 - "No recommendations available" in UI:
   Verify the product name matches or closely resembles one in the dataset (see sample product names above). The UI will suggest alternatives if no match is found.
